@@ -30,10 +30,10 @@ setup(
     zip_safe=False,
     install_requires=[
         "mlagents_envs==0.8.2",
-        "tensorflow>=1.7,<1.8",
+        "tensorflow>=1.7,<2.0",
         "Pillow>=4.2.1",
         "matplotlib",
-        "numpy>=1.13.3,<=1.14.5",
+        "numpy>=1.13.3,<1.17",
         "jupyter",
         "pytest>=3.2.2,<4.0.0",
         "docopt",
@@ -42,6 +42,6 @@ setup(
         "grpcio>=1.11.0,<1.12.0",
         'pypiwin32==223;platform_system=="Windows"',
     ],
-    python_requires=">=3.6,<3.7",
+    python_requires=">=3.6,<3.8",
     entry_points={"console_scripts": ["mlagents-learn=mlagents.trainers.learn:main"]},
 )

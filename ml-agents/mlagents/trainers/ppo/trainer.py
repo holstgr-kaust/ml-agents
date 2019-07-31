@@ -344,6 +344,7 @@ class PPOTrainer(Trainer):
                         bootstrapping_info = info
                         idx = l
                     value_next = self.policy.get_value_estimate(bootstrapping_info, idx)
+                    value_next = float(value_next[0])
 
                 self.training_buffer[agent_id]["advantages"].set(
                     get_gae(
